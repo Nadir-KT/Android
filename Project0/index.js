@@ -25,6 +25,7 @@ import { registerRootComponent } from 'expo';
 // the environment is set up appropriately
 // registerRootComponent(App);
 
+import React, {} from 'react';
 import { Provider } from 'react-redux';
 import configureStore from './store/configureStore';
 import Redux from './src/Redux/Redux'
@@ -35,5 +36,5 @@ const RNRedux = () => (
     </Provider>
 )
 
-//AppRegistry.registerComponent('main', () => State);
-AppRegistry.registerComponent(appName, () => Redux); // Select main source code to run & fletch appName to it.
+//AppRegistry.registerComponent('main', () => RNRedux);
+AppRegistry.registerComponent(appName, () => RNRedux); // Select main source code to run & fletch appName to it.
