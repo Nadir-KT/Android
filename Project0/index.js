@@ -14,4 +14,26 @@ import Contest from './src/Fun/Contest';
 import Reducer from './src/Fun/Reducer';
 import {name as appName} from './app.json'; // import app.json file in same folder// take name mentioned in app.json as appName
 
-AppRegistry.registerComponent(appName, () => State); // Select main source code to run & fletch appName to it.
+//AppRegistry.registerComponent(appName, () => State); // Select main source code to run & fletch appName to it.
+
+import { registerRootComponent } from 'expo';
+
+//import App from './App';
+
+// registerRootComponent calls AppRegistry.registerComponent('main', () => App);
+// It also ensures that whether you load the app in Expo Go or in a native build,
+// the environment is set up appropriately
+// registerRootComponent(App);
+
+import { Provider } from 'react-redux';
+import configureStore from './store/configureStore';
+import Redux from './src/Redux/Redux'
+const store = configureStore();
+const RNRedux = () => (
+    <Provider store={store}>
+        <Redux/>
+    </Provider>
+)
+
+//AppRegistry.registerComponent('main', () => State);
+AppRegistry.registerComponent(appName, () => Redux); // Select main source code to run & fletch appName to it.
