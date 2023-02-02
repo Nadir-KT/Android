@@ -1,5 +1,5 @@
 import { State } from "react-native-gesture-handler";
-import { COUNTER_CHANGE } from "../constants";
+import { COUNTER_CHANGE } from "../constants/index";
 
 const initialState = {
     count: 0

@@ -29,6 +29,7 @@ import React, {} from 'react';
 import { Provider } from 'react-redux';
 import configureStore from './store/configureStore';
 import Redux from './src/Redux/Redux'
+import Redux_fun from './src/Redux/Redux_fun'
 const store = configureStore();
 const RNRedux = () => (
     <Provider store={store}>
