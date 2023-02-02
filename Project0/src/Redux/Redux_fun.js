@@ -1,44 +1,35 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Button, Text, View } from 'react-native';
-import { connect } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { changeCount, counterIncrement, counterDecrement } from './actions/count';
 
-import { changeCount } from './actions/count'
-
-class Redux extends Component{
-    //state={count:0}; // State: Value of a variable
-    decrementCount(){
-        let{count}=this.props;
-        count--;
-        this.props.counterChange(count);
-    }
-    incrementCount(){
-        let{count}=this.props;
-        count++;
-        this.props.counterChange(count);
-    }
-    render(){ // class component does not return directly - use render to return
-        const {count}=this.props; // initializing variable: count inside the render
-        return(
+function Redux_fun (){
+const count = useSelector(state => state.counter.count);
+let dispatch = useDispatch();
+    // decrementCount = () => {
+    //     let temp = count - 1;
+    //     dispatch(changeCount(temp));
+    // }
+    // incrementCount = () => {
+    //     let temp = count + 1;
+    //     dispatch(changeCount(temp));
+    // }
+    
+    return(
         <View style={{flex:1,backgroundColor:'#fff',alignItems:'center',justifyContent:'center'}}>
             <Button
             title="increment"
-            onPress={()=>this.incrementCount()}/>
+            // onPress={()=>incrementCount()}
+            onPress={()=>dispatch(counterIncrement())}
+            />
             <Text>{count}</Text>
             <Button
             title="decrement"
-            onPress={()=>this.decrementCount()}/>
+            // onPress={()=>decrementCount()}
+            onPress={()=>dispatch(counterDecrement())}
+            />
         </View>
-    );}
+    );
 }
 
-const mapStateToProps = (state) => {
-    return {
-      count: state.counter.count
-    }
-  }
-const mapDispatchToProps = (dispatch) => {
-    return {
-        counterChange: (count)=> dispatch(changeCount(count))
-    }
-}
-export default connect(mapStateToProps, mapDispatchToProps)(Redux);
+export default Redux_fun;
