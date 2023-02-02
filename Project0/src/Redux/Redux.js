@@ -32,8 +32,10 @@ class Redux extends Component{
 }
 
 const mapStateToProps = (state) => {
-    return {count:state.counter.count}
-}
+    return {
+      count: state.counter.count
+    }
+  }
 const mapDispatchToProps = (dispatch) => {
     return {counterChange: (count)=> dispatch(changeCount(count))}
 }
