@@ -10,8 +10,7 @@
 // registerRootComponent(App);
 
 import {AppRegistry} from 'react-native'; // import AppRegistry from react-native components
-import React, { Component } from 'react';
-import { Provider } from 'react-redux';
+
 import App from './App'; // import App.js file in same folder
 import Flexbox from './src/flexbox';
 import Webview from './src/Webview';
@@ -21,11 +20,14 @@ import State from './src/Fun/State';
 import State_Effect from './src/Fun/State_Effect';
 import Contest from './src/Fun/Contest';
 import Reducer from './src/Fun/Reducer';
+import Async from './src/Async';
+import Realm_App from './src/Realm/Realm_App';
+
+import React, { Component } from 'react';
+import { Provider } from 'react-redux';
 import configureStore from './store/configureStore';
 import Redux from './src/Redux/Redux'
 import Redux_fun from './src/Redux/Redux_fun'
-import {name as appName} from './app.json'; // import app.json file in same folder// take name mentioned in app.json as appName
-
 const store = configureStore();
 const RNRedux = () => (
     <Provider store={store}>
@@ -33,4 +35,5 @@ const RNRedux = () => (
     </Provider>
 )
 
-AppRegistry.registerComponent(appName, () => RNRedux); // Select main source code to run & fletch appName to it.
+import {name as appName} from './app.json'; // import app.json file in same folder// take name mentioned in app.json as appName
+AppRegistry.registerComponent(appName, () => Realm_App); // Select main source code to run & fletch appName to it.
