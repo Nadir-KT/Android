@@ -37,4 +37,4 @@ const RNRedux = () => (
 )
 
 import {name as appName} from './app.json'; // import app.json file in same folder// take name mentioned in app.json as appName
-AppRegistry.registerComponent(appName, () => Realm_App); // Select main source code to run & fletch appName to it.
+AppRegistry.registerComponent(appName, () => Map); // Select main source code to run & fletch appName to it.
