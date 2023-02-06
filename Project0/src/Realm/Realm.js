@@ -16,7 +16,7 @@ Contact.schema = {
 let realm = new Realm ({schema:[Contact], schemaVersion: 4});
 
 let getAllContacts = ()=> {
-    return realm.Object("Contact");
+    return realm.object("Contact");
 }
 let addContact = (_recordID, _givenName, _familyName, _phoneNumber) => {
     realm.write(()=>{

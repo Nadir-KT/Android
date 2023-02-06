@@ -22,6 +22,7 @@ import Contest from './src/Fun/Contest';
 import Reducer from './src/Fun/Reducer';
 import Async from './src/Async';
 import Realm_App from './src/Realm/Realm_App';
+import Map from './src/Maps/Maps';
 
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
