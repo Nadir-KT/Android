@@ -5,7 +5,7 @@ class Contact extends Realm.Object {}
 Contact.schema = {
     name: "Contact",
     properties: {
-        recordID: 'string',
+        recordID: 'int',
         givenName: 'string',
         familyName: 'string',
         phoneNumber: 'string'
@@ -16,7 +16,7 @@ Contact.schema = {
 let realm = new Realm ({schema:[Contact], schemaVersion: 4});
 
 let getAllContacts = ()=> {
-    return realm.object("Contact");
+    return realm.objects("Contact");
 }
 let addContact = (_recordID, _givenName, _familyName, _phoneNumber) => {
     realm.write(()=>{
