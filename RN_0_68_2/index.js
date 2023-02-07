@@ -24,6 +24,10 @@ import Async from './src/Async';
 import Realm_App from './src/Realm/Realm_App';
 import Map from './src/Maps/Maps';
 import Register from './src/UI/0.Register';
+import OTP from './src/UI/OTP';
+import Details from './src/UI/Details';
+import Configuration from './src/UI/Configuration';
+import Drop from './src/UI/Drop';
 
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
@@ -38,4 +42,4 @@ const RNRedux = () => (
 )
 
 import {name as appName} from './app.json'; // import app.json file in same folder// take name mentioned in app.json as appName
-AppRegistry.registerComponent(appName, () => Register); // Select main source code to run & fletch appName to it.
+AppRegistry.registerComponent(appName, () => Drop); // Select main source code to run & fletch appName to it.
