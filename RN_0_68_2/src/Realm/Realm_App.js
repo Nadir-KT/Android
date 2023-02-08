@@ -12,7 +12,7 @@ function Realm_App (){
             <Text>{item.recordID}</Text>
             <Text>{item.givenName}</Text>
             <Text>{item.familyName}</Text>
-            <Text>{item.phoneNumber}</Text>
+            <Button title="delete" onPress={()=>{deleteAllContact(item.recordID); setContacts(getAllContacts);}}/>
         </View>
     );
     return(
@@ -30,7 +30,7 @@ function Realm_App (){
             <View style={{margin:20,width:250}}>
                 <Button title="Add"
                 onPress={(()=>{
-                    addContact(counter, textInputValue, textInputValue2, 'Delete');
+                    addContact(counter, textInputValue, textInputValue2, '911');
                     setContacts(getAllContacts);
                     setCounter(counter+1);
                     setTextInputValue('');
@@ -40,14 +40,15 @@ function Realm_App (){
             {/* <View style={{margin:20,width:250}}>
                 <Button title="Get"/>
             </View> */}
-            <View style={{margin:20,width:250}}>
+            {/* <View style={{margin:20,width:250}}>
                 <Button title="Delete"
                 onPress={()=>{
+                    //deleteAllContact();
                     deleteAllContact();
                     setContacts(getAllContacts);
-                    setCounter(1);
+                    //setCounter(1);
                 }}/>
-            </View>
+            </View> */}
             <View>
                 <Text style={{marginTop:10,fontSize:25,fontWeight:'bold'}}>Contacts</Text>
                 <FlatList

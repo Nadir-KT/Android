@@ -29,9 +29,13 @@ let addContact = (_recordID, _givenName, _familyName, _phoneNumber) => {
     })
 }
 
-let deleteAllContact = () => {
+//let deleteAllContact = () => {
+let deleteAllContact = id => {
     realm.write(() => {
-        realm.deleteAll()
+        //realm.deleteAll()
+        const del = realm.objects("Contact").filtered("recordID == recordID");
+        const spe = realm.objects("Contact").filter(userObj => userObj.recordID === id);
+        realm.delete(spe);
     })
 }
 export default realm;
