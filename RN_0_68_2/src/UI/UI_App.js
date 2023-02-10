@@ -203,7 +203,7 @@ function MyBottomTab(){
   )
 }
 
-export default function UI(){
+export default function UI_App(){
   return(
     <NavigationContainer>
       <MyStack/>
