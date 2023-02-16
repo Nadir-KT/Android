@@ -14,4 +14,6 @@ react-native start
 react-native run-android
 
 npm i react-native-gesture-handler
+npm i react-redux
+npm i react-native-webview
 npm i
