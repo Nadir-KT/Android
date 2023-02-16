@@ -1,0 +1,13 @@
+npm i react-redux
+npm i expo-status-bar
+npm i react-native-webview
+npm i react-native-vector-icons
+npm i @react-navigation/native
+npm i @react-navigation/stack
+npm i @react-navigation/drawer
+npm i @react-navigation/material-top-tabs
+npm i @react-navigation/bottom-tabs
+
+npm i
+react-native start
+react-native run-android
