@@ -1,19 +1,14 @@
-npm i react-redux
-npm i expo-status-bar
-npm i react-native-webview
-npm i react-native-vector-icons
-npm i @react-navigation/native
-npm i @react-navigation/stack
-npm i @react-navigation/drawer
-npm i @react-navigation/material-top-tabs
-npm i @react-navigation/bottom-tabs
-
-npm i
 clear
 react-native start
 react-native run-android
 
-npm i react-native-gesture-handler
-npm i react-redux
-npm i react-native-webview
 npm i
+npm i @react-navigation/native react-native-gesture-handler react-redux react-native-webview expo-status-bar react-native-maps react-native-geolocation-service react-native-google-places-autocomplete react-native-vector-icons react-native-dropdown-picker @react-navigation/stack @react-navigation/drawer @react-navigation/material-top-tabs @react-navigation/bottom-tabs react-native-paper redux axios
+npm i realm@10.24.0
+
+delete Firebase, RN_0_68_2
+
+npm i realm
+npm i --save realm
+npm un firebase
+npm un realm
