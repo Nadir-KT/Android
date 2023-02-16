@@ -6,8 +6,7 @@ npm i
 npm i @react-navigation/native react-native-gesture-handler react-redux react-native-webview expo-status-bar react-native-maps react-native-geolocation-service react-native-google-places-autocomplete react-native-vector-icons react-native-dropdown-picker @react-navigation/stack @react-navigation/drawer @react-navigation/material-top-tabs @react-navigation/bottom-tabs react-native-paper redux axios
 npm i realm@10.10.1
 npm i realm@10.24.0
-
-delete RN_0_68_2
+npm i react-native-gesture-handler
 
 npm i realm
 npm i --save realm
@@ -15,3 +14,5 @@ npm i react-native-reanimated
 
 npm un react-native-firebase
 npm un realm
+
+npm link 

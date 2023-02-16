@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableHighlight } from 'react-native';
-//import database from '@react-native-firebase/database'
+import database from '@react-native-firebase/database'
 
 let addItem = item => {
     database().ref('/Items').push({
