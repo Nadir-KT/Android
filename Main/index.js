@@ -31,8 +31,8 @@ import Configuration from './src/UI/Configuration';
 import Drop from './src/UI/Drop';
 import App_tour from './src/UI/App tour';
 import UI_App from './src/UI/UI_App';
-import Firebase_Msg from './src/Firebase/Firebase_Msg';
-import Firebase_Data from './src/Firebase/Firebase_Data';
+//import Firebase_Msg from './src/Firebase/Firebase_Msg';
+//import Firebase_Data from './src/Firebase/Firebase_Data';
 
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
@@ -49,4 +49,4 @@ const RNRedux = () => (
 import 'react-native-gesture-handler';
 
 import {name as appName} from './app.json'; // import app.json file in same folder// take name mentioned in app.json as appName
-AppRegistry.registerComponent(appName, () => Firebase_Data); // Select main source code to run & fletch appName to it.
+AppRegistry.registerComponent(appName, () => App); // Select main source code to run & fletch appName to it.
