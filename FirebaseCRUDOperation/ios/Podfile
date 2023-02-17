@@ -21,6 +21,10 @@ target 'RN_0_68_2' do
 
   pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
 
+  pod 'RNFBApp', :path => '../node_modules/@react-native-firebase/app'
+
+  pod 'RNFBDatabase', :path => '../node_modules/@react-native-firebase/database'
+
   target 'RN_0_68_2Tests' do
     inherit! :complete
     # Pods for testing
