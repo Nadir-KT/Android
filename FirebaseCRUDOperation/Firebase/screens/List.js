@@ -18,7 +18,7 @@ export default function List() {
     return (
         <View style={{ flex: 1, justifyContent: 'center', backgroundColor: '#ebebeb' }}>
             {(itemArray.length > 0)
-                ? <View style={{flex:1,flexDirection:'column',justifyContent:'space-around',alignItems:'center'}}>{
+                ? <View style={{ flex: 1, flexDirection: 'column', justifyContent: 'space-around', alignItems: 'center' }}>{
                     itemArray.map((item, index) => {
                         return (<Text sty>{item.name}</Text>)
                     })

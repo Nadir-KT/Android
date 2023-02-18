@@ -25,6 +25,8 @@ target 'RN_0_68_2' do
 
   pod 'RNFBDatabase', :path => '../node_modules/@react-native-firebase/database'
 
+  pod 'RNFBAuth', :path => '../node_modules/@react-native-firebase/auth'
+
   target 'RN_0_68_2Tests' do
     inherit! :complete
     # Pods for testing
