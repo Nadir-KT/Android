@@ -15,7 +15,7 @@ export default function Firebase_Data() {
     return (
         <NavigationContainer>
             <Stack.Navigator>
-                {/* <Stack.Screen name="MobileLogin" component={MobileLogin} /> */}
+                <Stack.Screen name="MobileLogin" component={MobileLogin} />
                 {/* <Stack.Screen name="Login" component={Login} /> */}
                 <Stack.Screen name="Home" component={Home} />
                 <Stack.Screen name="AddItem" component={AddItem} />
