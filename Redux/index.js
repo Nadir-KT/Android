@@ -21,9 +21,9 @@ import Redux_fun from './src/Redux/Redux_fun'
 const store = configureStore();
 const RNRedux = () => (
     <Provider store={store}>
-        <Redux_fun/>
+        <Redux/>
     </Provider>
 )
 
 import {name as appName} from './app.json'; // import app.json file in same folder// take name mentioned in app.json as appName
-AppRegistry.registerComponent(appName, () => Redux_fun); // Select main source code to run & fletch appName to it.
+AppRegistry.registerComponent(appName, () => RNRedux); // Select main source code to run & fletch appName to it.
