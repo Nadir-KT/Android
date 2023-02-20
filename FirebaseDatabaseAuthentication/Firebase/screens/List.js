@@ -7,8 +7,8 @@ let itemRef = database().ref('/Items');
 
 export default function List() {
     const [itemArray, setItemArray] = useState([]);
-    const [keys, setKeys] = useState([]);
-    const [ifUpdate, setIfUpdate] = useState(false);
+    const [keys, setKeys] = useState();
+    const [ifUpdate, setIfUpdate] = useState(true);
     const [updateText, setUpdateText] = useState('');
     const [updateIndex, setUpdateIndex] = useState(null);
     useEffect(() => {
