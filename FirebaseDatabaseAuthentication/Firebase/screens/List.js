@@ -15,9 +15,9 @@ export default function List() {
         itemRef.on('value', snapshot => {
             let data = snapshot.val();
             console.log(data)
-            const items = Object.values(data);
             setKeys(Object.keys(data))
             console.log(keys);
+			const items = Object.values(data);
             setItemArray(items);
         })
     }, [])

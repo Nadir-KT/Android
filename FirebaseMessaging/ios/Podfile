@@ -4,7 +4,7 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 platform :ios, '11.0'
 install! 'cocoapods', :deterministic_uuids => false
 
-target 'RN_0_68_2' do
+target 'FcmTest' do
   config = use_native_modules!
 
   # Flags change depending on the env values.
@@ -19,9 +19,7 @@ target 'RN_0_68_2' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
-  pod 'RNFirebase', :path => '../node_modules/react-native-firebase'
-
-  target 'RN_0_68_2Tests' do
+  target 'FcmTestTests' do
     inherit! :complete
     # Pods for testing
   end

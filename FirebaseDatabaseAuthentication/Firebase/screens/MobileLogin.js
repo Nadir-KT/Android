@@ -4,7 +4,7 @@ import auth from '@react-native-firebase/auth';
 import VerifyCode from './VerifyCode';
 import MobileNumber from './MobileNumber';
 
-export default function MobileLogin(navigation) {
+export default function MobileLogin({navigation}) {
     const [confirm, setConfirm] = useState(null);
     const mobileLogin = async (phoneNumber) => {
         console.log(phoneNumber)
