@@ -13,6 +13,7 @@ import OTP from './OTP';
 import Details from './Details';
 import Configuration from './Configuration';
 import App_tour from './App tour';
+import Course from './Course';
 import Login from './Login'
 import Flexbox from './flexbox'
 import DrawerContent from './Drawer/DrawerContent'
@@ -37,92 +38,146 @@ const Drawer = createDrawerNavigator()
 const Tab = createMaterialTopTabNavigator()
 const BottomTab = createBottomTabNavigator()
 
-function MyStack() {
+export default function MyStack() {
   return (
-    <Stack.Navigator>
-      <Stack.Screen
-        name='Register'
-        component={Register}
-        options={{ headerShown: false }} // Hide Navigation Bar
-      />
-      <Stack.Screen
-        name='OTP'
-        component={OTP} />
-      <Stack.Screen
-        name='Details'
-        component={Details} />
-      <Stack.Screen
-        name='Configuration'
-        component={Configuration} />
-      <Stack.Screen
-        name='App_tour'
-        component={App_tour} />
-      <Stack.Screen
-        name='Drawer'
-        component={MyDrawer}
-        options={{ headerShown: false }} // Hide Navigation Bar
-      />
-      <Stack.Screen
-        name='Tab'
-        component={MyTab}
-        options={{ headerShown: false }} // Hide Navigation Bar
-      />
-      <Stack.Screen
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name='Register'
+          component={Register}
+          options={{ headerShown: false }} // Hide Navigation Bar
+        />
+        <Stack.Screen
+          name='OTP'
+          component={OTP} />
+        <Stack.Screen
+          name='Details'
+          component={Details} />
+        <Stack.Screen
+          name='Configuration'
+          component={Configuration} />
+        <Stack.Screen
+          name='App_tour'
+          component={App_tour} />
+        <Stack.Screen
+          name='Drawer'
+          component={MyDrawer}
+          options={{ headerShown: false }} // Hide Navigation Bar
+        />
+        <Stack.Screen
+          name='Course'
+          component={Course} />
+        <Stack.Screen
+          name='Tab'
+          component={MyTab}
+          options={{ headerShown: false }} // Hide Navigation Bar
+        />
+        <Stack.Screen
+          name='BottomTab'
+          component={MyBottomTab}
+          options={{ headerShown: false }} // Hide Navigation Bar
+        />
+        
+      </Stack.Navigator>
+    </NavigationContainer>
+  )
+}
+
+function MyBottomTab() {
+  return ( // Adjust Tab fontSize
+    <BottomTab.Navigator
+      screenOptions={{
+        //tabBarLabelStyle: { fontSize: 8 },
+        //tabBarItemStyle: { flexDirection:'row' },
+        //tabBarStyle: { alignSelf:'center', height:74, position: 'absolute', marginBottom:131 , marginHorizontal: 16,borderColor:'#EEEEEE',borderWidth:1,borderRadius:8},
+        tabBarStyle: { position: 'absolute', bottom: 25, left: 20, right: 20, elevation: 1, backgroundColor: 'white', borderRadius: 10, borderWidth: 1, height: 50, paddingTop:10},
+      }}>
+      <Tab.Screen
+        options={{
+          tabBarActiveTintColor: 'red',
+          tabBarInactiveTintColor: 'grey',
+          tabBarIcon: ({ focused }) =>
+            focused ? <MaterialIcons name='call' size={8} color='red' /> : <MaterialIcons name='call' size={24} color='grey' />
+        }} 
+        name='Home'
+        component={Home}
+        />
+      <Tab.Screen
+        options={{
+          tabBarActiveTintColor: 'red',
+          tabBarInactiveTintColor: 'grey',
+          tabBarIcon: ({ focused }) =>
+            focused ? <MaterialIcons name='call' size={24} color='red' /> : <MaterialIcons name='call' size={24} color='grey' />
+        }} 
+        name='Calls'
+        component={Calls}
+        />
+      <Tab.Screen
+        name='Chats'
+        component={Chats}
+        options={{
+          tabBarActiveTintColor: 'red',
+          tabBarInactiveTintColor: 'grey',
+          tabBarIcon: ({ focused }) =>
+            focused ? <MaterialIcons name='chat' size={24} color='red' /> : <MaterialIcons name='chat' size={24} color='grey' />
+        }} />
+      <Tab.Screen
+        name='Status'
+        component={Status}
+        options={{
+          tabBarActiveTintColor: 'red',
+          tabBarInactiveTintColor: 'grey',
+          tabBarIcon: ({ focused }) =>
+            focused ? <MaterialIcons name='timelapse' size={24} color='red' /> : <MaterialIcons name='timelapse' size={24} color='grey' />
+        }} />
+        <Tab.Screen
+        name='Contacts'
+        component={Status}
+        options={{
+          tabBarActiveTintColor: 'red',
+          tabBarInactiveTintColor: 'grey',
+          tabBarIcon: ({ focused }) =>
+            focused ? <MaterialIcons name='timelapse' size={24} color='red' /> : <MaterialIcons name='timelapse' size={24} color='grey' />
+        }} />
+    </BottomTab.Navigator>
+  )
+}
+
+function MyDrawer() {
+  return (
+    //drawerContent={(props)=><DrawerContent{...props}/>} // passing props to DrawerContent
+    //<Drawer.Navigator>
+    <Drawer.Navigator
+      drawerContent={(props) => <DrawerContent{...props} />}>
+      <Tab.Screen
         name='BottomTab'
         component={MyBottomTab}
         options={{ headerShown: false }} // Hide Navigation Bar
-      />
-    </Stack.Navigator>
+         />
+      <Drawer.Screen
+        name='Profile'
+        component={Profile} />
+      <Drawer.Screen
+        name='Wallet Balance'
+        component={WalletBalance} />
+      <Drawer.Screen
+        name='Records'
+        component={Records} />
+      <Drawer.Screen
+        name='Refund and Policies'
+        component={RefundPolicies} />
+      <Drawer.Screen
+        name='Settings'
+        component={Settings} />
+      <Drawer.Screen
+        name='About Us'
+        component={AboutUs} />
+      <Drawer.Screen
+        name='Help'
+        component={Help} />
+    </Drawer.Navigator>
   )
 }
-
-function MyDrawer(){
-  return(
-  //drawerContent={(props)=><DrawerContent{...props} // passing props to DrawerContent
-  //<Drawer.Navigator>
-  <Drawer.Navigator
-  drawerContent={(props)=><DrawerContent{...props}/>}>
-    <Drawer.Screen
-    name='Home'
-    component={Home}/>
-    <Drawer.Screen
-    name='Profile'
-    component={Profile}/>
-    <Drawer.Screen
-    name='Wallet Balance'
-    component={WalletBalance}/>
-    <Drawer.Screen
-    name='Records'
-    component={Records}/>
-    <Drawer.Screen
-    name='Refund and Policies'
-    component={RefundPolicies}/>
-    <Drawer.Screen
-    name='Settings'
-    component={Settings}/>
-    <Drawer.Screen
-    name='About Us'
-    component={AboutUs}/>
-    <Drawer.Screen
-    name='Help'
-    component={Help}/>
-  </Drawer.Navigator>
-  )
-}
-
-const MyComponent = () => {
-  const [searchQuery, setSearchQuery] = React.useState('');
-
-  const onChangeSearch = query => setSearchQuery(query);
-
-  return (
-    <Searchbar style={{ backgroundColor: 'white', borderRadius: 10, marginVertical: 5, marginHorizontal: 5 }}
-      placeholder="Search"
-      onChangeText={onChangeSearch}
-      value={searchQuery}
-    />
-  );
-};
 
 function MyTab() {
   return ( // Adjust Tab fontSize
@@ -178,53 +233,16 @@ function MyTab() {
   )
 }
 
-function MyBottomTab() {
-  return ( // Adjust Tab fontSize
-    <BottomTab.Navigator
-      screenOptions={{
-        tabBarLabelStyle: { fontSize: 12 },
-        tabBarItemStyle: { width: 100 },
-        tabBarStyle: { backgroundColor: 'white' },
-      }}>
-      <Tab.Screen
-        name='Calls'
-        component={Calls}
-        options={{
-          tabBarActiveTintColor: 'red',
-          tabBarInactiveTintColor: 'grey',
-          tabBarIcon: ({ focused }) =>
-            focused ? <MaterialIcons name='call' size={24} color='red' /> : <MaterialIcons name='call' size={24} color='grey' />
-        }} />
-      <Tab.Screen
-        name='Chats'
-        component={Chats}
-        options={{
-          tabBarActiveTintColor: 'red',
-          tabBarInactiveTintColor: 'grey',
-          tabBarIcon: ({ focused }) =>
-            focused ? <MaterialIcons name='chat' size={24} color='red' /> : <MaterialIcons name='chat' size={24} color='grey' />
-        }} />
-      <Tab.Screen
-        name='Status'
-        component={Status}
-        options={{
-          tabBarActiveTintColor: 'red',
-          tabBarInactiveTintColor: 'grey',
-          tabBarIcon: ({ focused }) =>
-            focused ? <MaterialIcons name='timelapse' size={24} color='red' /> : <MaterialIcons name='timelapse' size={24} color='grey' />
-        }} />
-    </BottomTab.Navigator>
-  )
-}
+const MyComponent = () => {
+  const [searchQuery, setSearchQuery] = React.useState('');
 
-export default function UI_App() {
+  const onChangeSearch = query => setSearchQuery(query);
+
   return (
-    <NavigationContainer>
-      <MyStack />
-    </NavigationContainer>
-  )
-}
-
-const styles = StyleSheet.create({
-  container: { backgroundColor: 'white', width: 400, height: 50, borderRadius: 40 }
-})
+    <Searchbar style={{ backgroundColor: 'white', borderRadius: 10, marginVertical: 5, marginHorizontal: 5 }}
+      placeholder="Search"
+      onChangeText={onChangeSearch}
+      value={searchQuery}
+    />
+  );
+};

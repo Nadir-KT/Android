@@ -34,7 +34,7 @@ export default class OTP extends Component  // Register = child class name (prog
             </View>
             <TouchableHighlight style= {{width:311, height: 56, backgroundColor: '#00C458', borderRadius: 8, alignItems: 'center', justifyContent: 'center', marginTop:16}}
              underlayColor='red'
-             onPress={()=> this.props.navigation.navigate('Drawer')}
+             onPress={()=> this.props.navigation.navigate('Details')}
              >
                 <Text style={{fontSize: 18, fontWeight: 'bold', color:'white'}}>Resend OTP</Text>
             </TouchableHighlight>

@@ -30,6 +30,7 @@ import Details from './src/UI/Details';
 import Configuration from './src/UI/Configuration';
 import Drop from './src/UI/Drop';
 import App_tour from './src/UI/App tour';
+import Home from './src/UI/Drawer/Home';
 import UI_App from './src/UI/UI_App';
 //import Firebase_Msg from './src/Firebase/Firebase_Msg';
 //import Firebase_Data from './src/Firebase/Firebase_Data';

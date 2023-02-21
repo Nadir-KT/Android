@@ -16,7 +16,9 @@ export default class App_tour extends Component  // Register = child class name 
         </View>
         <View style={{width:72,height:72,position:'absolute', bottom:40,alignSelf:'center',borderTopRightColor:'#00C458',borderWidth:1,borderRadius:8,alignItems: 'center',justifyContent: 'center'}}>
             <TouchableHighlight style= {{width:56, height: 56, backgroundColor: '#00C458', borderRadius: 6, alignItems: 'center', justifyContent: 'center'}}
-             underlayColor='red'>
+             underlayColor='red'
+             onPress={()=> this.props.navigation.navigate('Drawer')}
+             >
                 <Text style={{fontSize: 18, fontWeight: 'normal', color:'white'}}>-></Text>
             </TouchableHighlight>
         </View>
