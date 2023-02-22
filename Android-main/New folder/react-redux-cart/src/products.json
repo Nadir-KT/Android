@@ -1,0 +1,39 @@
+{
+    "products": [{
+            "id": 1,
+            "name": "Hipster Ultimate",
+            "price": 299,
+            "image": "https://s3.amazonaws.com/makeitreal/projects/e-commerce/camiseta-1.jpg"
+        },
+        {
+            "id": 2,
+            "name": "On Motion Live",
+            "price": 99,
+            "image": "https://s3.amazonaws.com/makeitreal/projects/e-commerce/camiseta-2.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Underground Max",
+            "price": 149,
+            "image": "https://s3.amazonaws.com/makeitreal/projects/e-commerce/camiseta-3.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Oversky Max",
+            "price": 199,
+            "image": "https://rlv.zcache.com/unicorn_poo_t_shirt-r091b5c7fa85744bbb971148bbbcf3450_k2gm8_324.jpg?square_it=true"
+        },
+        {
+            "id": 5,
+            "name": "Sassy Susi",
+            "price": 119,
+            "image": "https://rlv.zcache.com/love_potion_no_1_romantic_quote_t_shirt-rb77635503423427b881f4a72f7a053a2_jf4s5_324.jpg"
+        },
+        {
+            "id": 6,
+            "name": "Grace Giving",
+            "price": 179,
+            "image": "https://rlv.zcache.co.nz/my_saving_grace_t_shirt-r279cb2b058c748f991020a31169cf6df_k2gl9_324.jpg"
+        }
+    ]
+}
