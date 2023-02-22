@@ -12,19 +12,20 @@
 import {AppRegistry} from 'react-native'; // import AppRegistry from react-native components
 
 import App from './App'; // import App.js file in same folder
-import UI from './src/UI'
+import Cart_UI from './src/Cart/1.Cart_UI'
 
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
-import configureStore from './store/configureStore';
+//import configureStore from './store/configureStore';
 import Redux from './src/Redux/Redux'
 import Redux_fun from './src/Redux/Redux_fun'
-const store = configureStore();
+//const store = configureStore();
+import store from './src/Cart/4.Store'
 const RNRedux = () => (
     <Provider store={store}>
-        <Redux_fun/>
+        <Cart_UI/>
     </Provider>
 )
 
 import {name as appName} from './app.json'; // import app.json file in same folder// take name mentioned in app.json as appName
-AppRegistry.registerComponent(appName, () => UI); // Select main source code to run & fletch appName to it.
+AppRegistry.registerComponent(appName, () => RNRedux); // Select main source code to run & fletch appName to it.

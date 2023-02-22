@@ -1,16 +1,12 @@
 import React, { Component, useState } from 'react';
 import { StyleSheet, Text, View, TouchableHighlight, FlatList, ScrollView } from 'react-native';
 import DropDownPicker from 'react-native-dropdown-picker';
+import { useSelector, useDispatch } from 'react-redux'
+import { REMOVE_FROM_CART } from '../redux/CartItem'
 
 export default function Cart({navigation}) {
-    const [data] = useState([
-        { name: 'Biology' },
-        { name: 'Physics' },
-        { name: 'Chemistry' },
-        { name: 'Technology' },
-        { name: 'Engineering' },
-        { name: 'Mathematics' },
-    ]);
+    const cartItems = useSelector(state => state)
+
     return (
         <View style={{ flex: 1, }}>
             <View style={{ backgroundColor: '#00202F' }}>
@@ -28,7 +24,7 @@ export default function Cart({navigation}) {
             </View>
             <View style={{ flex: 1, marginTop: 24, marginHorizontal: 24 }}>
                 <FlatList
-                    data={data}
+                    data={cartItems}
                     renderItem={({ item }) =>
                         <TouchableHighlight style={{ height: 115, borderColor: '#000000D9', borderRadius: 2, borderWidth: 1, alignItems: 'center', justifyContent: 'center', marginVertical: 8 }}
                             underlayColor='red'

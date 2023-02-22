@@ -1,18 +1,13 @@
 import React, { Component, useState } from 'react';
 import { StyleSheet, Text, View, TouchableHighlight, FlatList, ScrollView, Button } from 'react-native';
 import DropDownPicker from 'react-native-dropdown-picker';
+import { books } from '../store/Data'
+import { useSelector, useDispatch } from 'react-redux'
+import { ADD_TO_CART } from '../redux/CartItem'
 
 export default function Home({navigation}) {
-    const [data] = useState([
-        { name: 'Biology' },
-        { name: 'Physics' },
-        { name: 'Chemistry' },
-        { name: 'Technology' },
-        { name: 'Engineering' },
-        { name: 'Mathematics' },
-    ]);
-    const [cartItem, setCartItem] = useState([]);
     let dispatch = useDispatch();
+    const addItemToCart = item => dispatch({ type: ADD_TO_CART, payload: item })
     return (
         <View style={{ flex: 1, }}>
             <View style={{ backgroundColor: '#00202F' }}>
@@ -35,7 +30,7 @@ export default function Home({navigation}) {
                         <TouchableHighlight style={{ height: 115, borderColor: '#000000D9', borderRadius: 2, borderWidth: 1, alignItems: 'center', justifyContent: 'center', marginVertical: 8 }}
                             underlayColor='red'
                             badgeDotColors={'#446270'}
-                            onPress={() => {dispatch(cart(item.name)), console.log(dispatch)}}
+                            onPress={() => addItemToCart(item)}
                         >
                             <Text style={{ marginHorizontal: 8 }}>{item.name}</Text>
                         </TouchableHighlight>}
