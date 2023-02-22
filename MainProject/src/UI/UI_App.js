@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import { createDrawerNavigator } from '@react-navigation/drawer'
@@ -77,7 +78,7 @@ export default function MyStack() {
           component={MyBottomTab}
           options={{ headerShown: false }} // Hide Navigation Bar
         />
-        
+
       </Stack.Navigator>
     </NavigationContainer>
   )
@@ -90,28 +91,42 @@ function MyBottomTab() {
         //tabBarLabelStyle: { fontSize: 8 },
         //tabBarItemStyle: { flexDirection:'row' },
         //tabBarStyle: { alignSelf:'center', height:74, position: 'absolute', marginBottom:131 , marginHorizontal: 16,borderColor:'#EEEEEE',borderWidth:1,borderRadius:8},
-        tabBarStyle: { position: 'absolute', bottom: 25, left: 20, right: 20, elevation: 1, backgroundColor: 'white', borderRadius: 10, borderWidth: 1, height: 50, paddingTop:10},
+        tabBarStyle: { position: 'absolute', bottom: 25, left: 20, right: 20, elevation: 1, backgroundColor: 'white', borderRadius: 10, borderWidth: 1, height: 50, paddingTop: 10 },
       }}>
       <Tab.Screen
         options={{
+          tabBarLabel: '',
+          headerShown: false,
           tabBarActiveTintColor: 'red',
           tabBarInactiveTintColor: 'grey',
+          //   tabBarIcon: ({ focused }) =>
+          //     focused ? <MaterialIcons name='call' size={8} color='red' />: <MaterialIcons name='call' size={24} color='grey' />
+          // }} 
           tabBarIcon: ({ focused }) =>
-            focused ? <MaterialIcons name='call' size={8} color='red' /> : <MaterialIcons name='call' size={24} color='grey' />
-        }} 
-        name='Home'
+            focused ? (
+              <View style={{ width: 50 }}>
+                <MaterialIcons name="home" size={30} color={'red'} />
+              </View>
+            ) : (
+              <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
+                <MaterialIcons name="home" size={20} color={'grey'} />
+                <Text style={{ color: 'grey', fontSize: 10, marginRight: 5 }}>Home</Text>
+              </View>
+            )
+        }}
+        name="Home"
         component={Home}
-        />
+      />
       <Tab.Screen
         options={{
           tabBarActiveTintColor: 'red',
           tabBarInactiveTintColor: 'grey',
           tabBarIcon: ({ focused }) =>
             focused ? <MaterialIcons name='call' size={24} color='red' /> : <MaterialIcons name='call' size={24} color='grey' />
-        }} 
+        }}
         name='Calls'
         component={Calls}
-        />
+      />
       <Tab.Screen
         name='Chats'
         component={Chats}
@@ -130,7 +145,7 @@ function MyBottomTab() {
           tabBarIcon: ({ focused }) =>
             focused ? <MaterialIcons name='timelapse' size={24} color='red' /> : <MaterialIcons name='timelapse' size={24} color='grey' />
         }} />
-        <Tab.Screen
+      <Tab.Screen
         name='Contacts'
         component={Status}
         options={{
@@ -153,7 +168,7 @@ function MyDrawer() {
         name='BottomTab'
         component={MyBottomTab}
         options={{ headerShown: false }} // Hide Navigation Bar
-         />
+      />
       <Drawer.Screen
         name='Profile'
         component={Profile} />
