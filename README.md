@@ -15,6 +15,8 @@ module.exports = {
   plugins: ['react-native-reanimated/plugin'],
 };
 
+apply from: "../../node_modules/react-native-vector-icons/fonts.gradle" // add this line in android/app/build.gradle
+
 npm i @react-native-async-storage/async-storage": "^1.17.11",
 npm i react-native-tab-view": "^3.3.4",
 

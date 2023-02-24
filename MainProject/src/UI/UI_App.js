@@ -90,27 +90,27 @@ function MyBottomTab() {
       screenOptions={{
         //tabBarLabelStyle: { fontSize: 8 },
         //tabBarItemStyle: { flexDirection:'row' },
-        //tabBarStyle: { alignSelf:'center', height:74, position: 'absolute', marginBottom:131 , marginHorizontal: 16,borderColor:'#EEEEEE',borderWidth:1,borderRadius:8},
-        tabBarStyle: { position: 'absolute', bottom: 25, left: 20, right: 20, elevation: 1, backgroundColor: 'white', borderRadius: 10, borderWidth: 1, height: 50, paddingTop: 10 },
+        //tabBarStyle: { position: 'absolute', alignSelf: 'center', backgroundColor: 'white', height: 74, bottom: 131, left: 16, right: 16, borderColor: '#EEEEEE', borderWidth: 1, borderRadius: 8},
+        tabBarStyle: { position: 'absolute', elevation: 10, paddingTop: 10, height: 74, marginBottom: 131, marginHorizontal: 16, borderColor: '#EEEEEE', borderWidth: 1, borderRadius: 8 },
       }}>
       <Tab.Screen
         options={{
           tabBarLabel: '',
           headerShown: false,
-          tabBarActiveTintColor: 'red',
-          tabBarInactiveTintColor: 'grey',
+          //tabBarActiveTintColor: 'red',
+          //tabBarInactiveTintColor: 'grey',
           //   tabBarIcon: ({ focused }) =>
           //     focused ? <MaterialIcons name='call' size={8} color='red' />: <MaterialIcons name='call' size={24} color='grey' />
           // }} 
           tabBarIcon: ({ focused }) =>
             focused ? (
-              <View style={{ width: 50 }}>
-                <MaterialIcons name="home" size={30} color={'red'} />
+              <View style={{}}>
+                <MaterialIcons name="home" size={30} color={'#00C458'} />
               </View>
             ) : (
               <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
-                <MaterialIcons name="home" size={20} color={'grey'} />
-                <Text style={{ color: 'grey', fontSize: 10, marginRight: 5 }}>Home</Text>
+                <MaterialIcons name="home" size={25} color={'#C2C2C2'} />
+                <Text style={{ color: '#C2C2C2', fontSize: 8, marginLeft: 4, fontWeight: 'bold' }}>Home</Text>
               </View>
             )
         }}
@@ -119,10 +119,19 @@ function MyBottomTab() {
       />
       <Tab.Screen
         options={{
-          tabBarActiveTintColor: 'red',
-          tabBarInactiveTintColor: 'grey',
+          tabBarLabel: '',
+          headerShown: false,
           tabBarIcon: ({ focused }) =>
-            focused ? <MaterialIcons name='call' size={24} color='red' /> : <MaterialIcons name='call' size={24} color='grey' />
+            focused ? (
+              <View style={{}}>
+                <MaterialIcons name="play-arrow" size={30} color={'#00C458'} />
+              </View>
+            ) : (
+              <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
+                <MaterialIcons name="play-arrow" size={25} color={'#C2C2C2'} />
+                <Text style={{ color: '#C2C2C2', fontSize: 8, marginLeft: 4, fontWeight: 'bold' }}>Recent</Text>
+              </View>
+            )
         }}
         name='Calls'
         component={Calls}
@@ -131,28 +140,55 @@ function MyBottomTab() {
         name='Chats'
         component={Chats}
         options={{
-          tabBarActiveTintColor: 'red',
-          tabBarInactiveTintColor: 'grey',
+          tabBarLabel: '',
+          headerShown: false,
           tabBarIcon: ({ focused }) =>
-            focused ? <MaterialIcons name='chat' size={24} color='red' /> : <MaterialIcons name='chat' size={24} color='grey' />
+            focused ? (
+              <View style={{}}>
+                <MaterialIcons name="sticky-note-2" size={30} color={'#00C458'} />
+              </View>
+            ) : (
+              <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
+                <MaterialIcons name="sticky-note-2" size={25} color={'#C2C2C2'} />
+                <Text style={{ color: '#C2C2C2', fontSize: 8, marginLeft: 4, fontWeight: 'bold' }}>Exams</Text>
+              </View>
+            )
         }} />
       <Tab.Screen
         name='Status'
         component={Status}
         options={{
-          tabBarActiveTintColor: 'red',
-          tabBarInactiveTintColor: 'grey',
+          tabBarLabel: '',
+          headerShown: false,
           tabBarIcon: ({ focused }) =>
-            focused ? <MaterialIcons name='timelapse' size={24} color='red' /> : <MaterialIcons name='timelapse' size={24} color='grey' />
+            focused ? (
+              <View style={{}}>
+                <MaterialIcons name="account-circle" size={30} color={'#00C458'} />
+              </View>
+            ) : (
+              <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
+                <MaterialIcons name="account-circle" size={25} color={'#C2C2C2'} />
+                <Text style={{ color: '#C2C2C2', fontSize: 8, marginLeft: 4, fontWeight: 'bold' }}>Profile</Text>
+              </View>
+            )
         }} />
       <Tab.Screen
         name='Contacts'
         component={Status}
         options={{
-          tabBarActiveTintColor: 'red',
-          tabBarInactiveTintColor: 'grey',
+          tabBarLabel: '',
+          headerShown: false,
           tabBarIcon: ({ focused }) =>
-            focused ? <MaterialIcons name='timelapse' size={24} color='red' /> : <MaterialIcons name='timelapse' size={24} color='grey' />
+            focused ? (
+              <View style={{}}>
+                <MaterialIcons name="mail-outline" size={30} color={'#00C458'} />
+              </View>
+            ) : (
+              <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
+                <MaterialIcons name="mail-outline" size={25} color={'#C2C2C2'} />
+                <Text style={{ color: '#C2C2C2', fontSize: 8, marginLeft: 4, fontWeight: 'bold' }}>Contact</Text>
+              </View>
+            )
         }} />
     </BottomTab.Navigator>
   )
