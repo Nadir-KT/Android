@@ -199,6 +199,9 @@ function MyDrawer() {
     //drawerContent={(props)=><DrawerContent{...props}/>} // passing props to DrawerContent
     //<Drawer.Navigator>
     <Drawer.Navigator
+      screenOptions={{ 
+        drawerStyle: { width: 257 } 
+      }}
       drawerContent={(props) => <DrawerContent{...props} />}>
       <Tab.Screen
         name='BottomTab'

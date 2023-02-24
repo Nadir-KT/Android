@@ -5,12 +5,12 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 export default class DrawerContent extends Component {
     render() {
         return (
-            <View style={{ flex: 1, backgroundColor: '#002333', width: 257 }}>
+            <View style={{ flex: 1, backgroundColor: '#002333' }}>
                 <TouchableOpacity style={{
                     width: 32, height: 32, borderRadius: 6, borderColor: 'white', borderWidth: 1,
                     alignItems: 'center', justifyContent: 'center', marginLeft: 32, marginTop: 40
                 }}
-                    onPress={() => this.props.navigation.navigate('BottomTab')}
+                    onPress={() => this.props.navigation.closeDrawer()}
                 >
                     <MaterialIcons name="close" size={25} color={'#00C458'} />
                 </TouchableOpacity>
