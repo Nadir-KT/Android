@@ -5,15 +5,16 @@ import RazorpayCheckout from 'react-native-razorpay';
 export default function Razorpay() {
     const handlePayment = () => {
         var options = {
-            name: 'In Makes',
-            description: "For test payment",
+            name: 'Kings Crown',
+            description: "Crown",
+            //currency: 'USD',
             currency: 'INR',
-            amount: 50000,
+            amount: 9999900,
             key: 'rzp_test_3bVAi7XMPRnnwe',
             prefill: {
-                email: 'ss@gmail.com',
+                email: 'king@gmail.com',
                 contact: '9191919191',
-                name: 'Tester'
+                name: 'King'
             },
             theme: { color: '#f37251' }
         }

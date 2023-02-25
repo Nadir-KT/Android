@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { View, Text, Alert } from 'react-native';
-import firebase from 'react-native-firebase';
+//import firebase from 'react-native-firebase';
 
-export default function Firebase_Msg(){
+export default function RNF(){
     useEffect(()=>{
         checkPermission();
         messageListner();
