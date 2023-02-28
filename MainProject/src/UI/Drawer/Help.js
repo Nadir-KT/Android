@@ -12,9 +12,12 @@ export default function Help ({ navigation }) {
         { name: 'Mathematics' },
     ]);
     return (
-        <View style={{  }}>
-            <TextInput style={{ width: 311, height: 51, marginTop: 32, backgroundColor: '#062E40', borderColor: '#007345', borderWidth: 1, borderRadius: 8, fontSize: 16 }}
-          placeholder='Full name' placeholderTextColor={'#446270'}></TextInput>
+        <View style={{ width: 311, height: 48, marginHorizontal: 32, backgroundColor: '#062E40', borderColor: '#13394A', borderWidth: 1, borderRadius: 4,  flexDirection:'row' }}>
+            <TextInput 
+          placeholder='Ask a question?' placeholderTextColor={'#446270'} style={{fontSize: 12}} ></TextInput>
+          <TouchableOpacity style={{width: 52, height: 32, backgroundColor: 'white', alignSelf: 'center', backgroundColor: '#FFFFFF', borderWidth: 1, borderRadius: 4, position: 'absolute', right: 8, justifyContent:'center', alignItems:'center'}}>
+            <Text style={{ color: 'black', fontSize:10}}>Post</Text>
+          </TouchableOpacity>
         </View>
     )
 }
