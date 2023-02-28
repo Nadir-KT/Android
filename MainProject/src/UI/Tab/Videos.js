@@ -1,13 +1,36 @@
-import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Component, useState } from 'react';
+import { StyleSheet, Text, View, FlatList, TouchableOpacity } from 'react-native';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 
-export default class Videos extends Component 
-{
-    render(){return(
-        <View style={styles.container}>
-            <Text style={styles.text}>Videos</Text>
+export default function Videos({ navigation }) {
+    const [data] = useState([
+        { name: 'Biology' },
+        { name: 'Physics' },
+        { name: 'Chemistry' },
+        { name: 'Technology' },
+        { name: 'Engineering' },
+        { name: 'Mathematics' },
+    ]);
+    return (
+        <View style={{ top: 10, width: '100%', bottom: 0, position: 'absolute' }}>
+            <FlatList
+                data={data}
+                renderItem={({ item }) =>
+                    <TouchableOpacity style={{ height: 115, marginHorizontal: 24, borderColor: '#000000D9', borderRadius: 2, borderWidth: 1, justifyContent: 'center', marginVertical: 8 }}
+                        underlayColor='red'
+                        onPress={() => navigation.navigate('Tab')}
+                    >
+                        <Text style={{ marginLeft: 20 }}>{item.name}</Text>
+                        <View style={{ flexDirection: 'row', marginTop: 16, alignItems: 'center', marginLeft: 20 }}>
+                            <MaterialIcons name="circle" size={12} color={'#00C458'} style={{}} />
+                            <Text style={{ fontSize: 10, fontWeight: 'normal', color: '#00C458', marginLeft: 6 }}>12 Chapters</Text>
+                            <MaterialIcons name="circle" size={12} color={'#00C458'} style={{ marginLeft: 24 }} />
+                            <Text style={{ fontSize: 10, fontWeight: 'normal', color: '#00C458', marginLeft: 6 }}>124 hours</Text>
+                        </View>
+                    </TouchableOpacity>}
+            />
         </View>
-    )}
+    )
 }
 
 const styles = StyleSheet.create({
@@ -17,5 +40,5 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         backgroundColor: 'blue'
     },
-    text: {fontSize: 24, fontWeight: 'bold', color: 'white'}
+    text: { fontSize: 24, fontWeight: 'bold', color: 'white' }
 })
