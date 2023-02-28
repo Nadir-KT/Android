@@ -1,5 +1,5 @@
 import React, { Component, useState } from 'react';
-import { StyleSheet, Text, View, FlatList, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, Image, View, FlatList, TouchableOpacity, ScrollView, Button } from 'react-native';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 
 export default function Videos({ navigation }) {
@@ -13,22 +13,73 @@ export default function Videos({ navigation }) {
     ]);
     return (
         <View style={{ top: 10, width: '100%', bottom: 0, position: 'absolute' }}>
-            <FlatList
-                data={data}
-                renderItem={({ item }) =>
-                    <TouchableOpacity style={{ height: 115, marginHorizontal: 24, borderColor: '#000000D9', borderRadius: 2, borderWidth: 1, justifyContent: 'center', marginVertical: 8 }}
-                        underlayColor='red'
-                        onPress={() => navigation.navigate('Tab')}
-                    >
-                        <Text style={{ marginLeft: 20 }}>{item.name}</Text>
-                        <View style={{ flexDirection: 'row', marginTop: 16, alignItems: 'center', marginLeft: 20 }}>
-                            <MaterialIcons name="circle" size={12} color={'#00C458'} style={{}} />
-                            <Text style={{ fontSize: 10, fontWeight: 'normal', color: '#00C458', marginLeft: 6 }}>12 Chapters</Text>
-                            <MaterialIcons name="circle" size={12} color={'#00C458'} style={{ marginLeft: 24 }} />
-                            <Text style={{ fontSize: 10, fontWeight: 'normal', color: '#00C458', marginLeft: 6 }}>124 hours</Text>
-                        </View>
-                    </TouchableOpacity>}
-            />
+            <ScrollView>
+                <View style={{ height: 324, marginHorizontal: 24, borderColor: '#000000D9', borderRadius: 2, borderWidth: 1, marginVertical: 8 }}>
+                <Image source={require('../Assets/Crown.png')} style= {{height: 200, width: '100%'}}></Image>
+                    <View style={{position:'absolute', right:21, top:150 }}>
+                    <Button title='Biology'/>
+                    </View>
+                    <Text style={{ marginLeft: 20, marginTop:30 }}>Text</Text>
+                    <View style={{ flexDirection: 'row', marginTop: 16, alignItems: 'center', marginLeft: 20 }}>
+                        <MaterialIcons name="circle" size={12} color={'#00C458'} style={{}} />
+                        <Text style={{ fontSize: 10, fontWeight: 'normal', color: '#00C458', marginLeft: 6 }}>12 Chapters</Text>
+                        <MaterialIcons name="circle" size={12} color={'#00C458'} style={{ marginLeft: 24 }} />
+                        <Text style={{ fontSize: 10, fontWeight: 'normal', color: '#00C458', marginLeft: 6 }}>124 hours</Text>
+                    </View>
+                </View>
+                <View style={{ height: 324, marginHorizontal: 24, borderColor: '#000000D9', borderRadius: 2, borderWidth: 1, marginVertical: 8 }}>
+                <Image source={require('../Assets/Crown.png')} style= {{height: 200, width: '100%'}}></Image>
+                    <View style={{position:'absolute', right:21, top:150 }}>
+                    <Button title='Biology'/>
+                    </View>
+                    <Text style={{ marginLeft: 20, marginTop:30 }}>Text</Text>
+                    <View style={{ flexDirection: 'row', marginTop: 16, alignItems: 'center', marginLeft: 20 }}>
+                        <MaterialIcons name="circle" size={12} color={'#00C458'} style={{}} />
+                        <Text style={{ fontSize: 10, fontWeight: 'normal', color: '#00C458', marginLeft: 6 }}>12 Chapters</Text>
+                        <MaterialIcons name="circle" size={12} color={'#00C458'} style={{ marginLeft: 24 }} />
+                        <Text style={{ fontSize: 10, fontWeight: 'normal', color: '#00C458', marginLeft: 6 }}>124 hours</Text>
+                    </View>
+                </View>
+                <View style={{ height: 324, marginHorizontal: 24, borderColor: '#000000D9', borderRadius: 2, borderWidth: 1, marginVertical: 8 }}>
+                <Image source={require('../Assets/Crown.png')} style= {{height: 200, width: '100%'}}></Image>
+                    <View style={{position:'absolute', right:21, top:150 }}>
+                    <Button title='Biology'/>
+                    </View>
+                    <Text style={{ marginLeft: 20, marginTop:30 }}>Text</Text>
+                    <View style={{ flexDirection: 'row', marginTop: 16, alignItems: 'center', marginLeft: 20 }}>
+                        <MaterialIcons name="circle" size={12} color={'#00C458'} style={{}} />
+                        <Text style={{ fontSize: 10, fontWeight: 'normal', color: '#00C458', marginLeft: 6 }}>12 Chapters</Text>
+                        <MaterialIcons name="circle" size={12} color={'#00C458'} style={{ marginLeft: 24 }} />
+                        <Text style={{ fontSize: 10, fontWeight: 'normal', color: '#00C458', marginLeft: 6 }}>124 hours</Text>
+                    </View>
+                </View>
+                <View style={{ height: 324, marginHorizontal: 24, borderColor: '#000000D9', borderRadius: 2, borderWidth: 1, marginVertical: 8 }}>
+                <Image source={require('../Assets/Crown.png')} style= {{height: 200, width: '100%'}}></Image>
+                    <View style={{position:'absolute', right:21, top:150 }}>
+                    <Button title='Biology'/>
+                    </View>
+                    <Text style={{ marginLeft: 20, marginTop:30 }}>Text</Text>
+                    <View style={{ flexDirection: 'row', marginTop: 16, alignItems: 'center', marginLeft: 20 }}>
+                        <MaterialIcons name="circle" size={12} color={'#00C458'} style={{}} />
+                        <Text style={{ fontSize: 10, fontWeight: 'normal', color: '#00C458', marginLeft: 6 }}>12 Chapters</Text>
+                        <MaterialIcons name="circle" size={12} color={'#00C458'} style={{ marginLeft: 24 }} />
+                        <Text style={{ fontSize: 10, fontWeight: 'normal', color: '#00C458', marginLeft: 6 }}>124 hours</Text>
+                    </View>
+                </View>
+                <View style={{ height: 324, marginHorizontal: 24, borderColor: '#000000D9', borderRadius: 2, borderWidth: 1, marginVertical: 8 }}>
+                <Image source={require('../Assets/Crown.png')} style= {{height: 200, width: '100%'}}></Image>
+                    <View style={{position:'absolute', right:21, top:150 }}>
+                    <Button title='Biology'/>
+                    </View>
+                    <Text style={{ marginLeft: 20, marginTop:30 }}>Text</Text>
+                    <View style={{ flexDirection: 'row', marginTop: 16, alignItems: 'center', marginLeft: 20 }}>
+                        <MaterialIcons name="circle" size={12} color={'#00C458'} style={{}} />
+                        <Text style={{ fontSize: 10, fontWeight: 'normal', color: '#00C458', marginLeft: 6 }}>12 Chapters</Text>
+                        <MaterialIcons name="circle" size={12} color={'#00C458'} style={{ marginLeft: 24 }} />
+                        <Text style={{ fontSize: 10, fontWeight: 'normal', color: '#00C458', marginLeft: 6 }}>124 hours</Text>
+                    </View>
+                </View>
+            </ScrollView>
         </View>
     )
 }
