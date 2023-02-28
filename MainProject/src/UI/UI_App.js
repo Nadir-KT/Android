@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Text } from 'react-native';
+import { Text, TouchableHighlight } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import { createDrawerNavigator } from '@react-navigation/drawer'
@@ -199,8 +199,8 @@ function MyDrawer() {
     //drawerContent={(props)=><DrawerContent{...props}/>} // passing props to DrawerContent
     //<Drawer.Navigator>
     <Drawer.Navigator
-      screenOptions={{ 
-        drawerStyle: { width: 257 } 
+      screenOptions={{
+        drawerStyle: { width: 257 }
       }}
       drawerContent={(props) => <DrawerContent{...props} />}>
       <Tab.Screen
@@ -241,7 +241,7 @@ function MyTab() {
         screenOptions={{
           tabBarLabelStyle: { fontSize: 12 },
           tabBarItemStyle: { width: 100 },
-          tabBarStyle: { backgroundColor: 'white' },
+          tabBarStyle: { backgroundColor: '#00202F' },
           tabBarIndicatorStyle: { backgroundColor: 'red', height: 2 }
         }}
       // tabBarOptions={{indicatorStyle: {backgroundColor: 'red', height : 2}}}
@@ -287,16 +287,27 @@ function MyTab() {
   )
 }
 
-const MyComponent = () => {
-  const [searchQuery, setSearchQuery] = React.useState('');
-
-  const onChangeSearch = query => setSearchQuery(query);
+function MyComponent(props,{navigation}) {
 
   return (
-    <Searchbar style={{ backgroundColor: 'white', borderRadius: 10, marginVertical: 5, marginHorizontal: 5 }}
-      placeholder="Search"
-      onChangeText={onChangeSearch}
-      value={searchQuery}
-    />
+    <View style={{height: 238, }}>
+      <View style={{ backgroundColor: '#00202F', height: 238 }}>
+        <View style={{ marginTop: 40, marginHorizontal: 32 }}>
+          <TouchableHighlight style={{ width: 32, height: 32, borderColor: '#D5D5D5', borderRadius: 4, borderWidth: 1, alignItems: 'center', justifyContent: 'center' }}
+            underlayColor='red'
+            onPress={()=> props.navigation.navigate('Course')}
+          >
+            <MaterialIcons name="chevron-left" size={25} color={'#00C458'} />
+          </TouchableHighlight>
+          <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#FFFFFF', marginTop: 48 }}>Biology</Text>
+          <View style={{ flexDirection: 'row', marginTop: 8, alignItems: 'center' }}>
+            <MaterialIcons name="circle" size={12} color={'#00C458'} style={{}} />
+            <Text style={{ fontSize: 10, fontWeight: 'normal', color: '#00C458', marginLeft: 6 }}>12 Chapters</Text>
+            <MaterialIcons name="circle" size={12} color={'#00C458'} style={{ marginLeft: 27 }} />
+            <Text style={{ fontSize: 10, fontWeight: 'normal', color: '#00C458', marginLeft: 6 }}>124 hours</Text>
+          </View>
+        </View>
+      </View>
+    </View>
   );
 };
