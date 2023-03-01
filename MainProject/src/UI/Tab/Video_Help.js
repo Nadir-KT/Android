@@ -15,16 +15,18 @@ export default function VideoHelp({ navigation }) {
             <View style={{ backgroundColor: '#00202F', height: '100%' }}>
                 <View style={{ flexDirection: 'row', borderBottomWidth: 1, borderColor: '#13394A', height: 76, alignItems: 'center', justifyContent: 'center' }}>
                     <View style={{ marginLeft: 32, borderRightWidth: 1, borderColor: '#13394A' }}>
-                        <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#FFFFFF', marginRight: 45, flexWrap: 'wrap', width:220 }}>Long Chapter Name can be here shown here</Text>
+                        <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#FFFFFF', marginRight: 45, flexWrap: 'wrap', width:220 }}>Long Chapter Name can be shown here</Text>
                     </View>
                         <MaterialIcons name="file-download" size={38} color={'#FFFFFF'} style={{ marginLeft: 23, marginRight:32 }} />
                 </View>
-                <View style={{ flexDirection: 'row', alignItems: 'center', borderBottomWidth: 1, borderColor: '#13394A', height: 50 }}>
-                    <MaterialIcons name="chevron-left" size={12} color={'#9F9F9F'} style={{ marginLeft: 32 }} />
-                    <Text style={{ fontSize: 8, fontWeight: 'normal', color: '#9F9F9F', marginLeft: 6 }}>Previous</Text>
-                    <View style={{ marginLeft: 88, flexDirection: 'row',alignSelf:'center',justifyContent:'center' }}>
-                        <MaterialIcons name="circle" size={12} color={'#00C458'} style={{}} />
-                        <Text style={{ fontSize: 10, fontWeight: 'normal', color: '#00C458', marginLeft: 6 }}>Part1</Text>
+                <View style={{ flexDirection: 'row', alignItems: 'center', borderBottomWidth: 1, borderColor: '#13394A', height: 50 ,justifyContent:'center'}}>
+                    <View style={{position:'absolute',left:0,flexDirection:'row'}}>
+                    <MaterialIcons name="chevron-left" size={12} color={'#9F9F9F'} style={{marginLeft: 32}} />
+                    <Text style={{ fontSize: 8, fontWeight: 'normal', color: '#9F9F9F', marginLeft: 6}}>Previous</Text>
+                    </View>
+                    <View style={{flexDirection:'row',}}>
+                    <MaterialIcons name="circle" size={12} color={'#00C458'} style={{}} />
+                    <Text style={{ fontSize: 10, fontWeight: 'normal', color: '#00C458',marginLeft:6 }}>Part1</Text>
                     </View>
                     <Text style={{ fontSize: 8, fontWeight: 'normal', color: '#FFFFFF', position: 'absolute', right: 50 }}>Next</Text>
                     <MaterialIcons name="chevron-right" size={12} color={'#FFFFFF'} style={{ position: 'absolute', right: 32 }} />
@@ -48,13 +50,3 @@ export default function VideoHelp({ navigation }) {
         </View>
     )
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: 'blue'
-    },
-    text: { fontSize: 24, fontWeight: 'bold', color: 'white' }
-})
