@@ -52,16 +52,22 @@ export default function MyStack() {
         />
         <Stack.Screen
           name='OTP'
-          component={OTP} />
+          component={OTP} 
+          options={{ headerShown: false }} // Hide Navigation Bar
+          />
         <Stack.Screen
           name='Details'
-          component={Details} />
+          component={Details} 
+          options={{ headerShown: false }}
+          />
         <Stack.Screen
           name='Configuration'
-          component={Configuration} />
+          component={Configuration} 
+          options={{ headerShown: false }}/>
         <Stack.Screen
           name='App_tour'
-          component={App_tour} />
+          component={App_tour}
+          options={{ headerShown: false }} />
         <Stack.Screen
           name='Drawer'
           component={MyDrawer}
@@ -69,7 +75,9 @@ export default function MyStack() {
         />
         <Stack.Screen
           name='Course'
-          component={Course} />
+          component={Course} 
+          options={{ headerShown: false }} 
+          />
         <Stack.Screen
           name='Tab'
           component={MyTab}
