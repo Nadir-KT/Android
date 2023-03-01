@@ -22,7 +22,7 @@ export default function VideoHelp({ navigation }) {
                 <View style={{ flexDirection: 'row', alignItems: 'center', borderBottomWidth: 1, borderColor: '#13394A', height: 50 }}>
                     <MaterialIcons name="chevron-left" size={12} color={'#9F9F9F'} style={{ marginLeft: 32 }} />
                     <Text style={{ fontSize: 8, fontWeight: 'normal', color: '#9F9F9F', marginLeft: 6 }}>Previous</Text>
-                    <View style={{ marginLeft: 88, flexDirection: 'row',alignSelf:'center' }}>
+                    <View style={{ marginLeft: 88, flexDirection: 'row',alignSelf:'center',justifyContent:'center' }}>
                         <MaterialIcons name="circle" size={12} color={'#00C458'} style={{}} />
                         <Text style={{ fontSize: 10, fontWeight: 'normal', color: '#00C458', marginLeft: 6 }}>Part1</Text>
                     </View>
