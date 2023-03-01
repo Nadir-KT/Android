@@ -20,7 +20,8 @@ export default function Videos({ navigation }) {
                         <View style={{ height: 324, marginHorizontal: 24, borderColor: '#000000D9', borderRadius: 2, borderWidth: 1, marginVertical: 8 }}>
                             <Image source={require('../Assets/Crown.png')} style={{ height: 200, width: '100%' }}></Image>
                             <View style={{ position: 'absolute', right: 21, top: 150 }}>
-                                <Button title={data1.name} />
+                                <Button title={data1.name} 
+                                onPress={()=> navigation.navigate('VideoHelp')}/>
                             </View>
                             <Text style={{ marginLeft: 20, marginTop: 30 }}>{data1.name}</Text>
                             <View style={{ flexDirection: 'row', marginTop: 16, alignItems: 'center', marginLeft: 20 }}>

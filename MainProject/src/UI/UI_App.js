@@ -28,6 +28,7 @@ import Settings from './Drawer/Settings'
 import AboutUs from './Drawer/About'
 import Help from './Drawer/Help'
 import Videos from './Tab/Videos'
+import VideoHelp from './Tab/Video_Help';
 import Chapter from './Tab/Chapter'
 import Resources from './Tab/Resources'
 import QN_Bank from './Tab/QN Bank'
@@ -79,7 +80,11 @@ export default function MyStack() {
           component={MyBottomTab}
           options={{ headerShown: false }} // Hide Navigation Bar
         />
-
+        <Stack.Screen
+          name='VideoHelp'
+          component={VideoHelp}
+          options={{ headerShown: false }} // Hide Navigation Bar
+        />
       </Stack.Navigator>
     </NavigationContainer>
   )
@@ -234,10 +239,10 @@ function MyDrawer() {
   )
 }
 
-function MyTab({navigation}) {
+function MyTab({ navigation }) {
   return ( // Adjust Tab fontSize
     <View style={{ flex: 1, backgroundColor: 'white' }}>
-      <MyComponent navigation={navigation}/>
+      <MyComponent navigation={navigation} />
       <Tab.Navigator
         screenOptions={{
           tabBarLabelStyle: { fontSize: 12 },
