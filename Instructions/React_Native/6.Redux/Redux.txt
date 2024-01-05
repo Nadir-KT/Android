@@ -1,0 +1,30 @@
+Redux: use one application state(variable) as a global state
+--------------------------------------------------
+Components
+Actions
+Reducers
+Store
+Middleware
+
+UI->Actions->Constants->Reducer->Store->State(Redux)
+
+create a reducer --> then create a store and --> then connect the React Native application to the Redux store.
+
+https://www.npmjs.com/package/react-redux
+npm i react-redux
+
+https://www.npmjs.com/package/redux
+npm i redux
+
+https://www.npmjs.com/package/@reduxjs/toolkit
+npm i @reduxjs/toolkit
+
+https://www.npmjs.com/package/expo
+npm i expo
+
+https://codesandbox.io/embed/build-a-shopping-cart-with-react-redux-exodg
+https://stackblitz.com/edit/react-redux-cart?file=App.js
+https://redux.js.org/introduction/examples
+
+https://medium.com/@ayabellazreg/make-a-simple-shopping-cart-app-using-react-redux-1-3-fefde93e80c7
+https://github.com/AyaBellazreg/React-Shopping-Cart

@@ -1,0 +1,6 @@
+Terminal
+--------
+node FileName.js //Execute FileName.js
+
+index.js == main.c
+App.js == Modifying the app
