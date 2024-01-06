@@ -8,9 +8,9 @@ https://developer.android.com/studio/ 2020.3.1
 CMD
 ---
 node -v
-v18.12.1
+v20.10.0
 npm -v
-8.19.2
+10.2.3
 npm view react version
 18.2.0
 npm install -g npm@10.2.5
