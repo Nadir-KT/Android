@@ -4,15 +4,19 @@ npx npm cache clean--force
 npm start --reset-cache
 clear
 npx npm install
+npx npm audit fix
+npx npm uninstall -g react-native-cli
 npx npm install -g react-native-cli
 npm view react-native version
 react-native -v
+react-native-cli: 2.0.1
+react-native: 0.68.2
 npx react-native upgrade
 react-native upgrade
 
 CMD - Creating a New Project
 ----------------------------
-cd D:\MEGAsync\Software_Development\Mobile_App_Development\React_Native
+cd Folder_Path
 Set-ExecutionPolicy RemoteSigned \\ to use npx react-native as react-native
 npx react-native init ProjectName
 npx react-native init ProjectName --version 0.68.2 \\react-native init ProjectName --version 0.71.2

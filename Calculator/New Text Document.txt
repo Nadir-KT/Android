@@ -1,5 +1,3 @@
-https://pcmanager.microsoft.com/
-
 https://snack.expo.dev/@jcsmileyjr/calculator
 https://www.npmjs.com/package/react-native-calculator
 https://github.com/ReactNativeSchool/react-native-calculator
