@@ -1,4 +1,0 @@
-https://snack.expo.dev/@jcsmileyjr/calculator
-https://www.npmjs.com/package/react-native-calculator
-https://github.com/ReactNativeSchool/react-native-calculator
-https://www.freecodecamp.org/news/how-to-build-a-calculator-app-using-react-native-a-step-by-step-tutorial/

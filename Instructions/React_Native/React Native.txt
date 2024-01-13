@@ -1,9 +1,23 @@
+NPM vs YARN
+-----------
+npm: npm is installed with Node automatically.
+yarn: To install yarn npm have to be installed.
+npm i yarn
+npm install yarn --global
+npm install --global yarn
+PNPM: The fastest and most disk efficient package manager, but may have compatibility issues with some packages.
+pnpm is a ordinary version of pnpm, which needs Node.js to run.
+npm i pnpm
+npm install -g pnpm
+@pnpm/exe is packaged with Node.js into an executable, so it may be used on a system with no Node.js installed.
+npm install -g @pnpm/exe
+
 VS Code Terminal
 ----------------
 npx npm cache clean--force
 npm start --reset-cache
 clear
-npx npm install
+npx npm install \\ yarn install
 npx npm audit fix
 npx npm uninstall -g react-native-cli
 npx npm install -g react-native-cli
@@ -19,10 +33,10 @@ CMD - Creating a New Project
 cd Folder_Path
 Set-ExecutionPolicy RemoteSigned \\ to use npx react-native as react-native
 npx react-native init ProjectName
-npx react-native init ProjectName --version 0.68.2 \\react-native init ProjectName --version 0.71.2
+npx react-native init ProjectName --version 0.68.2 \\react-native init ProjectName --version 0.73.2
 npx react-native start \\ react-native start --reset-cache
 Open a New Terminal by clicking the plus button
-npx react-native run-android
+npx react-native run-android  \\ yarn react-native run-android
 
 CMD - Troubleshoot
 ------------------
