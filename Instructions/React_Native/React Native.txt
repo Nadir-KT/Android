@@ -17,7 +17,7 @@ VS Code Terminal
 npx npm cache clean--force
 npm start --reset-cache
 clear
-npx npm install \\ yarn install
+npx npm install \\ yarn install \\ pnpm install
 npx npm audit fix
 npx npm uninstall -g react-native-cli
 npx npm install -g react-native-cli
@@ -36,7 +36,8 @@ npx react-native init ProjectName
 npx react-native init ProjectName --version 0.68.2 \\react-native init ProjectName --version 0.73.2
 npx react-native start \\ react-native start --reset-cache
 Open a New Terminal by clicking the plus button
-npx react-native run-android  \\ yarn react-native run-android
+npx react-native run-android  \\ yarn react-native run-android \\ react-native run-android
+
 
 CMD - Troubleshoot
 ------------------
@@ -47,9 +48,9 @@ cd android
 ./gradlew clean
 cd..
 
-npm i //run this after deleting node modules
+npm i \\ yarn install //run this after deleting node modules
 
-npm uninstall //aliases: unlink, remove, rm, r, un
+npm uninstall //aliases: unlink, remove, rm, r, un \\ yarn uninstall \\ pnpm uninstall 
 
 Debugging
 ---------

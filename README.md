@@ -1,4 +1,10 @@
 clear
+cd android
+./gradlew clean
+cd..
+clear
+yarn install
+clear
 react-native start
 clear
 react-native run-android
@@ -30,3 +36,12 @@ npm un realm@10.24.0
 
 npm link 
 
+Calculator - BUILD SUCCESSFUL
+FcmTest - BUILD FAILED
+FirebaseDatabaseAuthentication - BUILD FAILED in 21m 33s
+FirebaseMessaging - BUILD SUCCESSFUL in 14m 27s
+MainProject
+Razorpay - BUILD FAILED
+react-native-ui-master - BUILD FAILED
+Redux
+redux functional test task
