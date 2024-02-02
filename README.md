@@ -40,8 +40,12 @@ Calculator - BUILD SUCCESSFUL
 FcmTest - BUILD FAILED
 FirebaseDatabaseAuthentication - BUILD FAILED in 21m 33s
 FirebaseMessaging - BUILD SUCCESSFUL in 14m 27s
-MainProject
+MainProject - BUILD FAILED in 30m 17s
 Razorpay - BUILD FAILED
 react-native-ui-master - BUILD FAILED
-Redux
-redux functional test task
+RealmApp - BUILD FAILED in 8m 50s
+Redux - BUILD FAILED in 6s
+redux functional test task - BUILD FAILED in 10s
+TODO - BUILD SUCCESSFUL in 18m 35s
+
+https://react-native-community.github.io/upgrade-helper/?from=0.66.0&to=0.73.2
